@@ -31,13 +31,12 @@ jobs:
             - .
   deploy:
     machine:
-        image: ubuntu-2004:202010-01
+      image: ubuntu-2004:202010-01
     steps:
       - attach_workspace:
           at: .
       - checkout
-      - run: aws s3 sync ./app/build s3://ci-cd-example
-    
+      - run: aws s3 sync ./app/build s3://riyactbucket
 
 workflows:
   build_test_deploy:
