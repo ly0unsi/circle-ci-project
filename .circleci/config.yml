@@ -36,7 +36,7 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - run: aws s3 sync ./app/build s3://riyactbucket
+      - run: aws s3 sync ./app/build s3://ryactbucket
 
 workflows:
   build_test_deploy:
